@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>{{ article.title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Anna Titova Portfolio">
+        <meta name="author" content="Roman M. Ekimov, romek@toywar.ru">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:400,700'>
+        <link rel="stylesheet" href="/static/css/bootstrap.css">
+        <link rel="stylesheet" href="/static/css/style.css">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+</head>
+
+<body>
+
+        <!-- Header -->
+        <div class="container">
+            <div class="header row">
+                <div class="logo span4">
+                    <h1><a href="/">Editor<br/> Anna Titova </a></h1>
+                </div>
+                <div class="call-us span8">
+                    <p>e-mail: <span>titova.editor@gmail.com</span></p>
+                    <hr/>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+ <div class="container">
+            <div class="row">
+                <h2>{{ article.title }}</h2>
+                <p>{{ article.body | safe }}</p>
+                <hr/>
+                <p align="center">Дата публикации на сайте <a href="http://info.olimpiada.ru/" about="_blank">Olimpiada.ru</a>:
+                    {{ article.timestamp }}
+                </p>
+            </div>
+ </div>
+
+        <!-- Javascript -->
+        <script src="/static/js/jquery.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
+        <script src="/static/js/jquery.backstretch.min.js"></script>
+        <script src="/static/js/jquery.countdown.js"></script>
+        <script src="/static/js/scripts.js"></script>
+        <script src="/static/tiny_mce/tiny_mce_src.js"></script>
+</body>
+</html>
