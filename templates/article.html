@@ -11,6 +11,10 @@
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster">
         <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Lato:400,700'>
+        <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic'
+              rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic,cyrillic-ext'
+              rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/static/css/bootstrap.css">
         <link rel="stylesheet" href="/static/css/style.css">
 
@@ -24,13 +28,19 @@
 <body>
 
         <!-- Header -->
-        <div class="container">
+         <div class="container">
             <div class="header row">
-                <div class="logo span4">
-                    <h1><a href="/">Editor<br/> Anna Titova </a></h1>
+                <div class="logo span2">
+                    <img src="/static/img/anka.jpg"
+                         style="width:100px;height:100px">
                 </div>
-                <div class="call-us span8">
-                    <p>e-mail: <span>titova.editor@gmail.com</span></p>
+                <div class="logo span4">
+                    <h1><a href="/">Анна Титова</a></h1><h5>Редактор</h5>
+                </div>
+                <div class="call-me span8">
+                    <p>e-mail:<a class="call-me" href="mailto:titova.editor@gmail.com">
+                        titova.editor@gmail.com
+                    </a></p>
                     <hr/>
                 </div>
             </div>
@@ -40,11 +50,11 @@
  <div class="container">
             <div class="row">
                 <h2>{{ article.title }}</h2>
-                <p>{{ article.body | safe }}</p>
-                <hr/>
-                <p align="center">Дата публикации на сайте <a href="http://info.olimpiada.ru/" about="_blank">Olimpiada.ru</a>:
+                <h8 align="left">Дата публикации на сайте <a href="http://info.olimpiada.ru/" about="_blank">Olimpiada.ru</a>:
                     {{ article.timestamp }}
-                </p>
+                </h8>
+                <hr/>
+                <p>{{ article.body | safe }}</p>
             </div>
  </div>
 
